@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS itsYaBoysADLs_db;
+
+CREATE DATABASE itsYaBoysADLs_db;
