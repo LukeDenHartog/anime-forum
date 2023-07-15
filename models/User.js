@@ -19,7 +19,7 @@ User.init(
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                len: [10]
+                len: [1, 20] // Allow length between 1 and 20 characters
             }
         }
     },

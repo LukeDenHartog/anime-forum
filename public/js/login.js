@@ -15,7 +15,7 @@ const loginFormHandler = async (event) => {
   
       if (response.ok) {
         // If successful, redirect the browser
-        document.location.replace('/');
+        document.location.replace('/profile');
       } else {
         alert(response.statusText);
       }
@@ -25,7 +25,7 @@ const loginFormHandler = async (event) => {
   const signupFormHandler = async (event) => {
     event.preventDefault();
   
-    const username = document.querySelector('#name-signup').value.trim();
+    const username = document.querySelector('#username-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
   
     if (username && password) {
@@ -34,11 +34,12 @@ const loginFormHandler = async (event) => {
         body: JSON.stringify({ username, password }),
         headers: { 'Content-Type': 'application/json' },
       });
-  
+  console.log(response)
       if (response.ok) {
         document.location.replace('/login');
       } else {
         alert(response.statusText);
+        console.log('Error in the signup form')
       }
     }
   };
