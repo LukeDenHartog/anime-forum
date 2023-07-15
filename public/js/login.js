@@ -2,8 +2,8 @@ const loginFormHandler = async (event) => {
     event.preventDefault();
   
     // Collect values from the login form
-    const username = document.querySelector('#usernameInputElement').value.trim();
-    const password = document.querySelector('#passwordInputElement').value.trim();
+    const username = document.querySelector('#username-login').value.trim();
+    const password = document.querySelector('#password-login').value.trim();
   
     if (username && password) {
       // Send a POST request
@@ -15,8 +15,9 @@ const loginFormHandler = async (event) => {
   
       if (response.ok) {
         // If successful, redirect the browser
-        document.location.replace('/profile');
+        document.location.replace('/');
       } else {
+        console.log('Incorrect username or password, please try again')
         alert(response.statusText);
       }
     }
