@@ -1,3 +1,5 @@
-DROP DATABASE IF EXISTS itsYaBoysADLs_db;
+DROP DATABASE IF EXISTS project_db;
 
-CREATE DATABASE itsYaBoysADLs_db;
+CREATE DATABASE project_db;
+
+USE project_db;

@@ -2,8 +2,8 @@ const loginFormHandler = async (event) => {
     event.preventDefault();
   
     // Collect values from the login form
-    const username = document.querySelector('#usernameInputElement').value.trim();
-    const password = document.querySelector('#passwordInputElement').value.trim();
+    const username = document.querySelector('#username-login').value.trim();
+    const password = document.querySelector('#password-login').value.trim();
   
     if (username && password) {
       // Send a POST request
@@ -17,6 +17,7 @@ const loginFormHandler = async (event) => {
         // If successful, redirect the browser
         document.location.replace('/');
       } else {
+        console.log('Incorrect username or password, please try again')
         alert(response.statusText);
       }
     }
@@ -25,7 +26,7 @@ const loginFormHandler = async (event) => {
   const signupFormHandler = async (event) => {
     event.preventDefault();
   
-    const username = document.querySelector('#name-signup').value.trim();
+    const username = document.querySelector('#username-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
   
     if (username && password) {
@@ -34,11 +35,12 @@ const loginFormHandler = async (event) => {
         body: JSON.stringify({ username, password }),
         headers: { 'Content-Type': 'application/json' },
       });
-  
+
       if (response.ok) {
-        document.location.replace('/login');
+        document.location.replace('/');
       } else {
         alert(response.statusText);
+        console.log('Error in the signup form')
       }
     }
   };
