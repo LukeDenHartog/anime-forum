@@ -13,7 +13,7 @@ const newCommentHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/comment');
+        document.location.replace('/');
       } else {
         alert('Failed to create new comment.');
         console.log('Failed to create new comment.')

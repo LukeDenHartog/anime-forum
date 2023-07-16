@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
   const commentData = await Comment.findAll({
     include: [{ model: User, attributes: ["username"] }],
   });
-  // Convert post data to plain JavaScript object
+  // Convert comment data to plain JavaScript object
   const comments = commentData.map((comment) => comment.get({ plain: true }));
   // Render homepage template with posts and login status
   res.render("homepage", {

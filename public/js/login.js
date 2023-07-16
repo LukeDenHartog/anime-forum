@@ -15,7 +15,7 @@ const loginFormHandler = async (event) => {
   
       if (response.ok) {
         // If successful, redirect the browser
-        document.location.replace('/comment');
+        document.location.replace('/');
       } else {
         console.log('Incorrect username or password, please try again')
         alert(response.statusText);
@@ -37,7 +37,7 @@ const loginFormHandler = async (event) => {
       });
 
       if (response.ok) {
-        document.location.replace('/comment');
+        document.location.replace('/');
       } else {
         alert(response.statusText);
         console.log('Error in the signup form')

@@ -7,20 +7,34 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
 <body>
-      {{#if logged_in}}
-        <a href="/comment">Leave a comment</a> |
+    {{#if logged_in}}
         <button class="no-button" id="logout">logout</button>
-        {{else}}
+    {{else}}
         <a href="/signin">login</a>
-        {{/if}}
+    {{/if}}
 
     {{{body}}}
 
-      {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
+    {{#if logged_in}}
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h3>Post a comment!</h3>
+
+                <form class="form new-comment-form">
+                    <div class="">
+                        <label for="comment-text">Enter text here:</label>
+                        <textarea class="form-input" id="comment-text" name="comment-text"></textarea>
+                    </div>
+                    <div class="">
+                        <button type="submit" class="btn btn-primary">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="./js/comment.js"></script>
+        <script src="/js/logout.js"></script>
+    {{/if}}
 </body>
-
-
-
 </html>
+
