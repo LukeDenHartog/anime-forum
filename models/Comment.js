@@ -18,6 +18,13 @@ Comment.init(
         len: [1, 200] // Allow length between 1 and 200 characters
       },
     },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
+    },
   },
   {
   sequelize,

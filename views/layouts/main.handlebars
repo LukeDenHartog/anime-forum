@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
 <body>
+      {{#if logged_in}}
+        <a href="/comment">Leave a comment</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/signin">login</a>
+        {{/if}}
+
     {{{body}}}
+
+      {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
+
+
+
 </html>
