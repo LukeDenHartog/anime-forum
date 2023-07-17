@@ -15,7 +15,8 @@ Comment.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1, 200] // Allow length between 1 and 200 characters
+        len: [1, 200], // Allow length between 1 and 200 characters
+        msg: "Please do not exceed the limit of 200 characters."
       },
     },
     user_id: {
