@@ -1,7 +1,6 @@
-const User = require('../models/User'); // Update the path accordingly
+const User = require('../models/User');
 const Comment = require('../models/Comment');
 const sequelize = require('../config/connection');
-// Assuming you have a Sequelize connection established
 
 sequelize.sync({ force: true }).then(() => {
 const userData = [
