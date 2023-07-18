@@ -11,13 +11,13 @@ This project facilitates user registration and comment creation, enabling partic
 - [What's the Best Anime?](#whats-the-best-anime)
   - [Description](#description)
   - [Table of Contents](#table-of-contents)
-  - [Installation](#installation)
+  - [Installation Via GitHub](#installation-via-github)
   - [Usage](#usage)
   - [Contribution Guidelines](#contribution-guidelines)
   - [License](#license)
   - [Questions](#questions)
 
-## Installation
+## Installation Via GitHub
 
 To install this project via GitHub, please follow these instructions:
 
@@ -47,8 +47,10 @@ This application is covered under: Apache License 2.0
 
 ## Questions
 
-Ryonerd79 GitHub username is: Ryonerd79 <https://github.com/Ryonerd79/>
+If anyone has a question to ask they can reach any one of the developers/contributors listed below:
+
+Daniel Roh's GitHub username is: Ryonerd79 <https://github.com/Ryonerd79/>
 
 Muzzammil Nawab's GitHub username is: YaBoiAli <https://github.com/YaBoiAli/>
 
- Luke A DenHartog's GitHub username is: Afrozez <https://github.com/Afrozez/>
+Luke A DenHartog's GitHub username is: Afrozez <https://github.com/Afrozez/>
