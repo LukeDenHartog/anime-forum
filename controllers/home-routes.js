@@ -46,8 +46,13 @@ router.get('/signin', (req, res) => {
     res.render("signin")
 })
 
+
 router.get('/comment', (req, res) => {
   res.render("comment")
+})
+
+router.get('/signin', (req, res) => {
+    res.render("signin")
 })
 
 router.get('/signin', (req, res) => {

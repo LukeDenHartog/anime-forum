@@ -26,7 +26,7 @@ app.use(session(sess));  //here's the session middleware, using this will allow 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
-app.use(express.static("public"));
+app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

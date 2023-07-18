@@ -1,0 +1,354 @@
+/* Global styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* Body */
+body {
+  margin: 0;
+  font-family: Roboto, -apple-system, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+  background-image: url("https://img.freepik.com/free-photo/flat-lay-workstation-with-copy-space-laptop_23-2148430879.jpg?w=1480&t=st=1689552202~exp=1689552802~hmac=836b1681c0e1d085326a31703a7c576d063d2fd19a9a37a7b393aa2be07f0989");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/* Forms Section */
+.forms-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Section Title */
+.section-title {
+  font-size: 32px;
+  letter-spacing: 1px;
+  padding-top: 30px;
+  color: #8f8d8a; /* Brownish color */
+}
+
+
+/* Forms Container */
+.forms {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+
+/* Form Wrapper */
+.form-wrapper {
+  animation: hideLayer 0.3s ease-out forwards;
+}
+
+
+.form-wrapper.is-active {
+  animation: showLayer 0.3s ease-in forwards;
+}
+
+
+@keyframes showLayer {
+  50% {
+    z-index: 1;
+  }
+  100% {
+    z-index: 1;
+  }
+}
+
+
+@keyframes hideLayer {
+  0% {
+    z-index: 1;
+  }
+  49.999% {
+    z-index: 1;
+  }
+}
+
+
+/* Switcher Buttons */
+.switcher {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: #9c907a; /* Silverish color */
+  background-color: transparent;
+  border: none;
+  outline: none;
+  transform: translateX(0);
+  transition: all 0.3s ease-out;
+}
+
+
+/* Active state for login switcher */
+.form-wrapper.is-active .switcher-login {
+  color: #9b9a9a;
+  transform: translateX(90px);
+}
+
+
+/* Active state for signup switcher */
+.form-wrapper.is-active .switcher-signup {
+  color: #c0c0c0;
+  transform: translateX(-90px);
+}
+
+
+/* Underline animation */
+.underline {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  width: 100%;
+  height: 2px;
+}
+
+
+.underline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: inherit;
+  display: block;
+  width: inherit;
+  height: inherit;
+  background-color: currentColor;
+  transition: transform 0.2s ease-out;
+}
+
+
+/* Animation for login switcher underline */
+.switcher-login .underline::before {
+  transform: translateX(101%);
+}
+
+
+/* Animation for signup switcher underline */
+.switcher-signup .underline::before {
+  transform: translateX(-101%);
+}
+
+
+/* Active state for switcher underline */
+.form-wrapper.is-active .underline::before {
+  transform: translateX(0);
+}
+
+
+/* Form styles */
+.form {
+  overflow: hidden;
+  min-width: 260px;
+  margin-top: 50px;
+  padding: 30px 25px;
+  border-radius: 5px;
+  transform-origin: top;
+}
+
+
+/* Login form animation */
+.form-login {
+  animation: hideLogin 0.3s ease-out forwards;
+}
+
+
+.form-wrapper.is-active .form-login {
+  animation: showLogin 0.3s ease-in forwards;
+}
+
+
+@keyframes showLogin {
+  0% {
+    background: #575551;
+    transform: translate(40%, 10px);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  100% {
+    background-color: #5e5959;
+    transform: translate(35%, -20px);
+  }
+}
+
+
+@keyframes hideLogin {
+  0% {
+    background-color: #c0c0c0;
+    transform: translate(35%, -20px);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  100% {
+    background: #3d3c3a;
+    transform: translate(40%, 10px);
+  }
+}
+
+
+/* Signup form animation */
+.form-signup {
+  animation: hideSignup 0.3s ease-out forwards;
+}
+
+
+.form-wrapper.is-active .form-signup {
+  animation: showSignup 0.3s ease-in forwards;
+}
+
+
+@keyframes showSignup {
+  0% {
+    transform: translate(-40%, 10px) scaleY(0.8);
+  }
+  50% {
+    transform: translate(0, 0) scaleY(0.8);
+  }
+  100% {
+    background-color: #5e5959;
+    transform: translate(-35%, -20px) scaleY(1);
+  }
+}
+
+
+@keyframes hideSignup {
+  0% {
+    background-color: #c0c0c0;
+    transform: translate(-35%, -20px) scaleY(1);
+  }
+  50% {
+    transform: translate(0, 0) scaleY(0.8);
+  }
+  100% {
+    background: #3d3c3a;
+    transform: translate(-40%, 10px) scaleY(0.8);
+  }
+}
+
+
+/* Form fieldset styles */
+.form fieldset {
+  position: relative;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  transition: all 0.3s ease-out;
+}
+
+
+/* Login form fieldset positioning */
+.form-login fieldset {
+  transform: translateX(-50%);
+}
+
+
+/* Signup form fieldset positioning */
+.form-signup fieldset {
+  transform: translateX(50%);
+}
+
+
+/* Active state for form fieldset */
+.form-wrapper.is-active fieldset {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.4s ease-in, transform 0.35s ease-in;
+}
+
+
+/* Form legend styles */
+.form legend {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+
+/* Input block styles */
+.input-block {
+  margin-bottom: 20px;
+}
+
+
+.input-block label {
+  font-size: 14px;
+  color: #949292;
+}
+
+
+.input-block input {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: 16px;
+  line-height: 40px;
+  color: #242323;
+  background: #a1a1a0;
+  border: 1px solid #a1a1a0;
+  border-radius: 2px;
+}
+
+
+/* Form submit button styles */
+.form [type="submit"] {
+  opacity: 0;
+  display: block;
+  min-width: 120px;
+  margin: 30px auto 10px;
+  font-size: 18px;
+  line-height: 40px;
+  border-radius: 25px;
+  border: none;
+  transition: all 0.3s ease-out;
+}
+
+
+/* Active state for form submit button */
+.form-wrapper.is-active .form [type="submit"] {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.4s ease-in;
+}
+
+
+/* Login button styles */
+.btn-login {
+  color: #c0c0c0;
+  background: #6e6658;
+  transform: translateX(-30%);
+}
+
+
+/* Signup button styles */
+.btn-signup {
+  color: #666460;
+  background: #c0c0c0;
+  box-shadow: inset 0 0 0 2px #6e6658;
+  transform: translateX(30%);
+}
+
+.hidden{
+    display: none;
+}
