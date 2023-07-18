@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
+const User = require("./User"); // Import the User model
 
 class Comment extends Model {}
 
@@ -27,12 +28,24 @@ Comment.init(
     },
   },
   {
-  sequelize,
-  timestamps: true,
-  freezeTableName: true,
-  underscored: true,
-  modelName: "comment",
+    sequelize,
+    timestamps: true,
+    freezeTableName: true,
+    underscored: true,
+    modelName: "comment",
   }
-  );
-  
-  module.exports = Comment;
+);
+
+const comments = await Comment.findAll({
+  include: {
+    model: User,
+    attributes: ['username'],
+  },
+});
+
+// Define the association
+Comment.belongsTo(User, {
+  foreignKey: 'user_id',
+});
+
+module.exports = Comment;
