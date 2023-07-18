@@ -18,13 +18,14 @@
     "url": "https://github.com/Afrozez/Project-2/issues"
   },
   "dependencies": {
-    "connect-session-sequelize": "^7.1.7",
-    "express-session": "^1.17.3",
-    "express-handlebars": "^7.0.7",
     "bcrypt": "^5.1.0",
+    "connect-session-sequelize": "^7.1.7",
     "dotenv": "^8.2.0",
     "express": "^4.18.2",
+    "express-handlebars": "^7.0.7",
+    "express-session": "^1.17.3",
     "mysql2": "^3.5.0",
+    "node-sass": "^9.0.0",
     "sequelize": "^6.32.1"
   },
   "homepage": "https://github.com/Afrozez/Project-2#readme"
