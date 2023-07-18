@@ -32,16 +32,15 @@
         event.preventDefault();
 
 
-        const email = document.querySelector('#signup-email').value.trim();
         const username = document.querySelector('#signup-username').value.trim();
         const password = document.querySelector('#signup-password').value.trim();
         const confirmPassword = document.querySelector('#signup-password-confirm').value.trim();
 
 
-        if (email && username && password && confirmPassword && password === confirmPassword) {
+        if (username && password && confirmPassword && password === confirmPassword) {
           const response = await fetch('/api/users', {
             method: 'POST',
-            body: JSON.stringify({ email, username, password }),
+            body: JSON.stringify({username, password }),
             headers: { 'Content-Type': 'application/json' },
           });
 

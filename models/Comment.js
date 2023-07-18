@@ -36,7 +36,7 @@ Comment.init(
   }
 );
 
-const comments = await Comment.findAll({
+const comments = Comment.findAll({
   include: {
     model: User,
     attributes: ['username'],
