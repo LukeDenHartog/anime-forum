@@ -36,16 +36,4 @@ Comment.init(
   }
 );
 
-const comments = Comment.findAll({
-  include: {
-    model: User,
-    attributes: ['username'],
-  },
-});
-
-// Define the association
-Comment.belongsTo(User, {
-  foreignKey: 'user_id',
-});
-
 module.exports = Comment;
