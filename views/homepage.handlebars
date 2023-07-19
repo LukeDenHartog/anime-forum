@@ -51,7 +51,14 @@
     <h1>What's the best Anime?</h1>
     <p>Login/sign up to leave a comment</p>
   </div>
-
+  <div class = "row">
+  {{#each imageList}}
+  <div class="col-md-4">
+      <div class="text-success" style="font-size: large;
+            font-weight: 700;">{{this.name}}</div>
+         <img src="{{this.src}}">
+  {{/each}}
+  </div>
   {{#each comments}}
     <div class="container">
       <div class="row">

@@ -4,8 +4,9 @@ app.get("/static", (req, res) => {
 
 app.get("/dynamic", (req, res) => {
     imageList = [];
-    imageList.push({ src: "icons/flask.png", name: "flask" });
-    imageList.push({ src: "icons/javascript.png", name: "javascript" });
-    imageList.push({ src: "icons/react.png", name: "react" });
+    imageList.push({ src: "/public/images/Naruto-anime.jpg", name: "Naruto" });
+    imageList.push({ src: "/public/images/Bleach-anime.jpg", name: "Bleach" });
+    imageList.push({ src: "/public/images/one-piece-anime.jpg", name: "One Piece" });
+    imageList.push({ src: "/public/images/death-note-anime.jpg", name: "Death Note" });
     res.render("dynamic", { imageList: imageList });
 });
