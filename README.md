@@ -2,6 +2,8 @@
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
+Here is a link to the deployed application. <https://drive.google.com/file/d/1HKEJS9LBe0HrcY9RQkzMGMNbS0kyOvPt/view?usp=drive_link>
+
 ## Description
 
 This project facilitates user registration and comment creation, enabling participants to engage in substantive discussions about their preferred content.
