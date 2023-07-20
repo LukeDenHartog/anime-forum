@@ -1,0 +1,26 @@
+body {
+    background: url('https://images4.alphacoders.com/687/687987.jpg');
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-position: center center;
+}
+.contact-form {
+    max-width: 500px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+}
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.contact-form label {
+    font-weight: bold;
+}
+.contact-form .form-control {
+    border-radius: 5px;
+}
+.contact-form .btn-primary {
+    width: 100%;
+}

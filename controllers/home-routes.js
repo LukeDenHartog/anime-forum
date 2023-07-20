@@ -65,4 +65,8 @@ router.get('/signin', (req, res) => {
     res.render('signin');
   });
 
+router.get('/contact', (req, res) => {
+  res.render('contact')
+})
+
 module.exports = router;
