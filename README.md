@@ -4,6 +4,9 @@
 
 Here is a link to the deployed application. <https://drive.google.com/file/d/1HKEJS9LBe0HrcY9RQkzMGMNbS0kyOvPt/view?usp=drive_link>
 
+## Screenshot
+![Screenshot(170)](./public/images/Screenshot%20(170).png)
+
 ## Description
 
 This project facilitates user registration and comment creation, enabling participants to engage in substantive discussions about their preferred content.
