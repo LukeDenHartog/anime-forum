@@ -51,7 +51,15 @@
     <h1>What's the best Anime?</h1>
     <p>Login/sign up to leave a comment</p>
   </div>
-
+  <div class = "row">
+  {{#each images}}
+  <div class="col-md-4">
+    <img src = "public/images/Naruto-anime.jpg">
+    <img src = "public/images/Bleach-anime.jpg">
+    <img src = "public/images/one-piece-anime.jpg">
+    <img src = "public/images/death-note-anime.jpg">
+  {{/each}}
+  </div>
   {{#each comments}}
     <div class="container">
       <div class="row">
