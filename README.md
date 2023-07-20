@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-Here is a link to the deployed application. <https://drive.google.com/file/d/1HKEJS9LBe0HrcY9RQkzMGMNbS0kyOvPt/view?usp=drive_link>
+Here is a link to the deployed application. <https://dry-fjord-40958-6d6119c1d47d.herokuapp.com/#>
 
 ## Description
 
