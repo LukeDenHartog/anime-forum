@@ -1,4 +1,4 @@
-<body>
+<body class="random-background">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <button
       class="navbar-toggler"
@@ -40,7 +40,7 @@
             {{else}}
               <a class="dropdown-item" href="signin">Login/Signup</a>
             {{/if}}
-            <a class="dropdown-item" href="#contact">Contact</a>
+            <a class="dropdown-item" href="contact">Contact</a>
           </div>
         </li>
       </ul>
@@ -49,14 +49,18 @@
 
   <div class="container mt-4">
     <h1>What's the best Anime?</h1>
-    <p>Login/sign up to leave a comment</p>
+    {{#if logged_in}}
+    <p>Please be respectful and kind to others! 😁</p>
+    {{else}}
+      <a href="signin">Login/Signup</a><span>to leave a comment</span>
+    {{/if}}
   </div>
 
   {{#each comments}}
-    <div class="container">
+    <div class="container" id="comment-container"> 
       <div class="row">
         <div class="col-md-6">
-          <div class="border p-3">
+          <div class="border p-3 comment">
             <p><strong>{{this.user.username}}</strong>:
               {{this.comment_text}}</p>
           </div>
@@ -72,4 +76,5 @@
   <script
     src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
   ></script>
+  <script src="./js/mainstyle.js"></script>
 </body>
